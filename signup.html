@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signup</title>
+<style>
+/* slide container */
+
+.auth-content{
+transition:0.5s ease;
+}
+
+/* slide animation */
+
+.slide-left{
+transform:translateX(-50px);
+opacity:0;
+}
+
+.slide-right{
+transform:translateX(50px);
+opacity:0;
+}    
+    /* initial state */
+
+body{
+opacity:0;
+transform:translateY(20px);
+transition:0.6s ease;
+}
+
+/* active state */
+
+body.loaded{
+opacity:1;
+transform:translateY(0);
+}
+
+/* exit animation */
+
+body.fade-out{
+opacity:0;
+transform:translateY(-20px);
+}
+
+.password-box{
+position:relative;
+}
+
+#toggleEye{
+position:absolute;
+right:10px;
+top:50%;
+transform:translateY(-50%);
+cursor:pointer;
+}
+
+</style>
+
+<link rel="stylesheet" href="login.css">
+<link rel="icon" type="image/png" sizes="64x64" href="images/faviconn.png">
+</head>
+
+<body class="auth-page">
+
+<div class="cursor-glow"></div>
+
+<header class="auth-header">
+<h2>ReviewHall</h2>
+</header>
+
+<!-- LEFT SIDE SLIDER -->
+<div class="poster-slider">
+
+<div class="poster-column">
+<img src="images/gta5.jpg">
+<img src="images/valorant.jpg">
+<img src="images/pubg.jpg">
+<img src="images/gta5.jpg">
+<img src="images/valorant.jpg">
+<img src="images/pubg.jpg">
+<img src="images/gta5.jpg">
+<img src="images/valorant.jpg">
+<img src="images/pubg.jpg">
+<img src="images/gta5.jpg">
+<img src="images/valorant.jpg">
+<img src="images/pubg.jpg">
+</div>
+
+<div class="poster-column">
+<img src="images/pubg.jpg">
+<img src="images/gta5.jpg">
+<img src="images/valorant.jpg">
+<img src="images/pubg.jpg">
+<img src="images/gta5.jpg">
+<img src="images/valorant.jpg">
+<img src="images/pubg.jpg">
+<img src="images/gta5.jpg">
+<img src="images/valorant.jpg">
+<img src="images/pubg.jpg">
+<img src="images/gta5.jpg">
+<img src="images/valorant.jpg">
+</div>
+
+<div class="poster-column">
+<img src="images/valorant.jpg">
+<img src="images/pubg.jpg">
+<img src="images/gta5.jpg">
+<img src="images/pubg.jpg">
+<img src="images/gta5.jpg">
+<img src="images/valorant.jpg">
+<img src="images/pubg.jpg">
+<img src="images/gta5.jpg">
+<img src="images/valorant.jpg">
+<img src="images/valorant.jpg">
+<img src="images/pubg.jpg">
+<img src="images/gta5.jpg">
+</div>
+
+</div>
+<!-- RIGHT SIDE LOGIN -->
+<div class="auth-content">
+
+<h1>Create Account</h1>
+<input id="username" placeholder="Username">
+<input id="email" type="email" placeholder="Email">
+<div class="password-box">
+<input id="password" type="password" placeholder="Password">
+<span id="toggleEye">👁️</span>
+</div>
+
+
+<button id="submitBtn">Sign Up</button>
+
+<p id="message"></p>
+
+<p id="loginLink">
+Have an account?
+<a href="login.html" style="color: rgb(255, 217, 0); text-decoration: none">Login</a>
+</p>
+
+</div>
+
+<div id="toast" class="toast">
+<span id="toastText"></span>
+<div class="progress"></div>
+</div>
+
+<script src="../js/signup.js"></script>
+
+</body>
+</html>
